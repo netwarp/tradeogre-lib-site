@@ -11,7 +11,9 @@
 	</head>
 	<body>
 		<div class="container">
-			<img src="./img/logo.svg" alt="">
+			<div class="logo-container">
+				<img src="./img/logo.svg" alt="">
+			</div>
 			<h1>TradeOgre lib</h1>
 
 			<p>TradeOgre rest api with promise. <br> Node 18+</p>
@@ -21,6 +23,45 @@
 			<div class="command">
 				npm i tradeogre-lib
 			</div>
+
+			<h2>Usage</h2>
+
+			<pre class="command">
+				<code>
+import TradeOgre from 'tradeogre-lib'
+const tradeOgre = new TradeOgre(process.env.KEY, process.env.SECRET)
+
+const markets = await tradeOgre.markets()
+console.log(markets)
+
+const orders = await tradeOgre.orders('BTC-XMR')
+console.log(orders)
+
+const ticker = await tradeOgre.ticker('BTC-XMR')
+console.log(ticker)
+
+const history = await tradeOgre.history('BTC-XMR')
+console.log(history)
+
+const buy = await tradeOgre.buy('BTC-XMR', 0.01, 0.0061)
+console.log(buy)
+
+const sell = await tradeOgre.sell('BTC-XMR', 0.01, 0.00619)
+console.log(sell)
+
+const cancel = await tradeOgre.cancel()
+console.log(cancel)
+
+const orders = await tradeOgre.orders()
+console.log(orders)
+
+const balance = await tradeOgre.balance('BTC')
+console.log(balance)
+
+const balances = await tradeOgre.balances()
+console.log(balances)
+				</code>
+			</pre>
 		</div>
 	</body>
 </html>

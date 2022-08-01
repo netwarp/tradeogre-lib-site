@@ -2,10 +2,23 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+    @apply
+    bg-zinc-800
+}
+
 .container {
     @apply
+    bg-gray-100
+    w-4/5
     mx-auto
-    px-8
+    mt-4
+    p-16
+}
+
+.logo-container img {
+    @apply
+    mx-auto
 }
 
 h1, h2 {
@@ -16,13 +29,15 @@ h1, h2 {
 h1 {
     @apply
     text-4xl
-    my-3
+    mt-8
+    mb-3
 }
 
 h2 {
     @apply
     text-3xl
-    my-3
+    mt-8
+    mb-3
 }
 
 .command {
